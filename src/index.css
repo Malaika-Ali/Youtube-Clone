@@ -1,13 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
+
+.custom-h {
+    height: auto !important;
+}
+
+@media screen and (min-width: 1024px) {
+    .custom-h {
+        height: 100vh !important;
+    }
+}
+
+.dark-bg {
+    background-color: #0F0F0F;
+}
+
+.light-bg {
+    background-color: #FFFFFF;
+}
+
+.light-text {
+    color: #FFFFFF;
+}
+
+.dark-text {
+    color: black;
+}
+
+.white-text {
+    color: rgb(255 255 255 / 0.5);
+}
+
+.light-div-bg {
+    background-color: #F2F2F2;
+}
+
+.light-bg-hover:hover {
+    background-color: #F2F2F2;
+}
+
+/* Profile Dropdown's bg color */
+.dark-modal-bg {
+    background-color: #282828;
+}
+
+.sidebar-transition {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+
+/* ************************Loader******************************* */
+.load-bar {
+    height: 1rem;
+    /* Set the height of the loader */
+    width: 100%;
+    /* Set the width to full */
+    background-color: #ccc;
+    /* Set the background color of the
+    loader bar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+}
+
+.bar {
+    height: 100%;
+    width: 0;
+    /* Initial width set to 0 */
+}
+
+/*  keyframes for the loader animation */
+@keyframes loader {
+    0% {
+        width: 0;
+        /* Start with width 0 */
+    }
+
+    33.33%{
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+        /* End with full width */
+    }
+}
+
+/* Apply the animation to the loader bar */
+.animate-loader {
+    animation: loader 5s linear infinite;
+    /* Duration, timing function, and loop */
+}
+
+
+  /* Zoom in effect for video cards */
+.subtitle-zoom {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+.subtitle-zoom:hover {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+  }
+  
+  .translate-x-0 {
+    transform: translateX(0); /* Slide in from left to right */
+  }
+  
+  .translate-x-full {
+    transform: translateX(-100%); /* Slide out to the left */
+  }
